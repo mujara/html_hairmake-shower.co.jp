@@ -1,0 +1,632 @@
+@use "../_setting" as s;
+
+
+// .globalNaviSmall　グローバルナビ ハンバーガーメニュー
+.globalNaviSmall {
+	&__icon {
+		width: 3em;
+		height: 3em;
+		position: absolute;
+		top:0;
+		right:0;
+	}
+	&__iconButton{
+		width: 4em;
+		height: 4.4em;
+		cursor:pointer;
+		float: right;
+		display: block;
+		background: s.$colorType02;
+		position: relative;
+		z-index:999;
+	}
+	&__title{
+		width: 2em;
+		display: block;
+	    	position: absolute;
+		top:0.7em;
+		left:50%;
+		margin-left:-1em;
+		img{
+			width:100%;
+		}
+	}
+	&__icon span {
+	    width: 2em;
+	    height: 1px;
+	    display: block;
+	    background: #FFF;
+	    position: absolute;
+	    left: 50%;
+	    top: 2.5em;
+	    margin-left: -25%; 
+	}
+	.modal{
+		z-index:100;
+	}
+}
+	
+
+.globalNaviSmall{
+	&__icon--type01{
+		// ハンバーガーメニュー 押す前
+		span {
+		  -webkit-transition: all 0.3s;
+		          transition: all 0.3s;
+		  -webkit-transform: rotate(0deg);
+		      -ms-transform: rotate(0deg);
+		          transform: rotate(0deg); 
+		}
+		.iconButton--top {
+		  -webkit-transform: translateY(-0.6em);
+		      -ms-transform: translateY(-0.6em);
+		          transform: translateY(-0.6em); 
+		}
+		.iconButton--bottom {
+		  -webkit-transform: translateY(0.6em);
+		      -ms-transform: translateY(0.6em);
+		          transform: translateY(0.6em); 
+    	}
+
+    	// ハンバーガーメニュー hover
+		&:hover {
+			.iconButton--top {
+			  -webkit-transform: translateY(-0.7em);
+			      -ms-transform: translateY(-0.7em);
+			          transform: translateY(-0.7em);
+			}
+			.iconButton--bottom {
+			  -webkit-transform: translateY(0.7em);
+			      -ms-transform: translateY(0.7em);
+			          transform: translateY(0.7em); 
+          	}
+    	}
+
+    	// ハンバーガーメニュー 押した後の動き
+		&.is-open {
+			.iconButton--middle {
+			  background: rgba(255, 255, 255, 0);
+			}
+			.iconButton--top {
+			  -webkit-transform: rotate(-45deg) translateY(0px);
+			      -ms-transform: rotate(-45deg) translateY(0px);
+			          transform: rotate(-45deg) translateY(0px); 
+			}
+			.iconButton--bottom {
+				  -webkit-transform: rotate(45deg) translateY(0px);
+				      -ms-transform: rotate(45deg) translateY(0px);
+				          transform: rotate(45deg) translateY(0px);
+			}
+    	}
+	}
+}
+
+
+
+/* .globalNaviSmall　スマホグローバルナビ
+------------------------------------------ */
+.globalNaviSmall {
+	display:block;
+	width:100%;
+	position: fixed;
+	z-index:888;
+	top:0;
+	left:0;
+	@include s.media(m){
+		display: none;
+	}
+	&__siteTitle{
+		width:7em;
+		margin-bottom:3em;
+		img{
+			width:100%;
+		}
+	}
+	&__menu{
+		width:100%;
+	  	max-height: 100vh;
+		display:block;
+		&__inner{
+			width:100%;
+		  	min-height: 100vh;
+			overflow-x:hidden;
+			overflow-y:auto;
+  			padding: 2em;
+			display:block;
+		}
+		&__main{
+			li {
+				@include s.fontType04(Medium);
+				display:block;
+				a{
+					padding:1.2rem 0 0.4rem 0.5em;
+					display:block;
+					border-bottom:s.$colorType02 solid 1px;
+					&:hover{
+						color:#999;
+					}
+					&:after{
+	                    			content: "\f105";
+			                    	font-family: 'icomoon';
+						float:right;
+						padding-right:1em;
+					}
+				}
+			}
+			>li:last-child {
+				margin-bottom:5em;
+			}
+			>li{
+				>span{
+					padding:1.5rem 0 0;
+					display:block;
+					color:s.$colorType02;
+				}
+				&:nth-last-child(1)>a{
+					display:none;
+				}
+			}
+		}
+		&__sub{
+			position:relative;
+			&::before{
+	          		content: " ";
+				display:block;
+				width:1px;
+				height: calc(100% - 0.5em);
+				background:s.$colorType02;
+				position:absolute;
+				top:0.5em;
+				left:0.5em;
+			}
+			li{
+  				padding:0 0 0 2em;
+			}
+			.globalNaviSmall__menu__sub{
+				&::before{
+	          			content: none;
+				}
+				li{
+					&:last-child{
+						border-bottom:none;
+					}
+				}
+			}
+			>li{
+				>span{
+					padding:1.5rem 0 0;
+					display:block;
+				}
+			}
+		}
+	}
+	.modal__overlay {
+		background: none;
+	}
+	.modal__container {
+		background:rgba(255,255,255,.8);
+		width:100%;
+		max-width: 100%;
+		border-radius: 0;
+  		padding: 6em 0 0 0;
+		min-height: 100vh;
+		backdrop-filter: blur(10px);
+	}
+}
+
+#wrapper .globalNaviSmall__menu__main li a {
+	line-height:1.7;
+}
+
+
+/* Safari */
+_:lang(x)+_:-webkit-full-screen-document, .globalNaviSmall__menu {
+  min-height: -webkit-fill-available;
+}
+_:lang(x)+_:-webkit-full-screen-document, .globalNaviSmall__menu__inner {
+  min-height: -webkit-fill-available;
+}
+
+/* .tabBox--typeGlobalNaviSmall　タブ
+------------------------------------------ */
+.tabBox--typeGlobalNaviSmall {
+  	display: block;
+  	text-align:center;
+  	&__button{
+  		width: calc(100%/2);
+  		padding:0 0.2em;
+  		font-size: 1.1em;
+  		text-align: center;
+  		color: #565656;
+  		display: block;
+  		float: left;
+		@include s.media(m){
+  			width: auto;
+  			font-size: 1.2em;
+  			display: inline-block;
+  			float:none;
+		}
+		&:hover span{
+			opacity: 0.5;
+		}
+		span{
+			display:block;
+			height:100%;
+	  		border-right:#CCC solid 0.5px;
+	  		border-left:#FFF solid 0.5px;
+  			background-color: #DDD;
+	    	cursor :pointer;
+			transition: all 0.5s ease;
+	  		padding: 0.7em calc(s.$spaceSize/2) 0.3em;
+			@include s.media(m){
+	  			padding: s.$spaceSize s.$spaceSize*2;
+			}
+		}
+	}
+	input[name="tabBox--typeGlobalNaviSmall__button"] {
+		display: none;
+	}
+	&__content{
+	  	display: none;
+	  	clear: both;
+  		position:relative;
+  		text-align:left;
+		padding-top:1.5em;
+		&::before {
+			content:" ";
+			width:116%;
+			height:2px;
+			background:s.$colorType02;
+			display:block;
+			position:absolute;
+			top:0;
+			left: -8%;
+		}
+	}
+	//選択されているタブのコンテンツのみを表示
+	#tabBox--typeGlobalNaviSmall__label001:checked ~ #tabBox--typeGlobalNaviSmall__label001__content,
+	#tabBox--typeGlobalNaviSmall__label002:checked ~ #tabBox--typeGlobalNaviSmall__label002__content {
+	  	display: block;
+		animation-name: tabBox--type01--fade;
+		animation-duration: 1s;
+	}
+	//選択されているタブのスタイルを変える
+	input:checked + .tabBox--typeGlobalNaviSmall__button span{
+	  	background-color: s.$colorType02;
+	  	color: #fff;
+		pointer-events:none;
+	}
+	input:checked + .tabBox--typeGlobalNaviSmall__button:hover span{
+		opacity: 1;
+	}
+}
+
+@keyframes tabBox--typeGlobalNaviSmall--fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .globalNavi　グローバルナビ
+------------------------------------------ */
+
+.globalNavi{
+	display:none;
+	@include s.media(m){
+		display:block;
+	}
+	&__menu{
+		&__main{
+			width:100%;
+			display:flex;
+			justify-content:flex-end;
+			align-items:center;
+			>li {
+				@include s.fontType04(Medium);
+				height: 3.9em;
+				text-align:center;
+				display:block;
+			   	//position: relative; /*z-indexの指定や子要素の基準とするために指定*/
+			   	z-index: 2; /*ドロップダウンしたメニューが隠れないように*/
+				&>a{
+					position:relative;
+					&::after {
+			                    	content: " ";
+			                    	display:block;
+						height:0.3em;
+			                   	position:absolute;
+						top:0;
+						left:0;
+						background:s.$colorType02;
+						width:0;
+						-webkit-transition: all .2s ease;
+						transition: all .2s ease;
+			                }
+					&:hover::after {
+						width:100%;
+					}
+			        }
+				&>span{
+					position:relative;
+					&::after {
+			                    	content: " ";
+			                    	display:block;
+						height:0.3em;
+			                   	position:absolute;
+						top:0;
+						left:0;
+						background:s.$colorType02;
+						width:0;
+						-webkit-transition: all .2s ease;
+						transition: all .2s ease;
+			                }
+					&:hover::after {
+						width:100%;
+					}
+			        }
+				&:nth-last-child(1)>a{
+					color:#FFF;
+					background:s.$colorType02;
+					height:100%;
+					padding:1em 2em 0 3em;
+					display:none;
+					&::before {
+						font-size:0.5em;
+			                    	content: "\f04b";
+			                    	font-family: 'icomoon';
+			                   	position:absolute;
+						top:50%;
+						left:50%;
+						margin-top:-0.8em;
+						margin-left:-6.5em;
+			                }
+					&::after {
+			                    	content: none;
+			                }
+					&:hover{
+						background:#000;
+					}
+				}
+				&:nth-last-child(2)>a{
+					color:#000;
+					background:s.$colorType04;
+					height:100%;
+					padding:1em 2em 0 3em;
+					&::before {
+						font-size:0.5em;
+			                    	content: "\f04b";
+			                    	font-family: 'icomoon';
+			                   	position:absolute;
+						top:50%;
+						left:50%;
+						margin-top:-0.8em;
+						margin-left:-4em;
+			                }
+					&::after {
+			                    	content: none;
+			                }
+					&:hover{
+						background:#000;
+						color:#FFF;
+					}
+				}
+			}
+			li{
+				a {
+					text-decoration:none;
+					display:block;
+					color:#FFF;
+					padding:1em 1em 0 1em;
+					&:hover {
+						color:#FFF;
+						text-decoration:none;
+					}
+				}
+				span{
+					padding:1em 1em 0 1em;
+					color:#FFF;
+					display:block;
+				}
+			}
+		}
+	}
+}
+
+#wrapper .globalNavi__menu__main>li>a{
+	line-height:1.7;
+}
+
+
+
+.page-template-page-bridal,
+.page-template-page-bridal-single,
+.type-bridal,.term-news-bridal,
+.single-staff_bridal,
+.post-type-archive-staff_bridal,
+.single-gallery_bridal,
+.post-type-archive-gallery_bridal,
+.tax-gallery_bridal_cat,
+.single-blog_bridal,
+.tax-blog_bridal_cat,
+.post-type-archive-blog_bridal,
+.single-voice,
+.post-type-archive-voice
+{
+	.globalNavi__menu__main>li{
+			>a{
+				color:#808080;
+			}
+			>span{
+				color:#808080;
+			}
+			&:nth-last-child(1)>a{
+				color:#FFF;
+			}
+			&:nth-last-child(2)>a{
+				background:s.$colorType03;
+				&:hover{
+					background:#000;
+				}
+			}
+	}
+}
+
+
+
+/* .globalNavi__menu__sub　グローバルナビサブメニュー
+------------------------------------------ */
+.globalNavi{
+}
+
+
+#wrapper .globalNavi__menu__sub {
+	width:100vw;
+	opacity: 0;  /*サブメニューは最初は非表示にしておく*/
+	visibility: hidden;  /*サブメニューは最初は非表示にしておく*/
+	position: absolute;
+	top: 5em;
+	left: 50%;
+	margin-left:-50vw;
+	border-top: 1px solid #EEE;  /*ボーダートップを指定*/
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
+	background:rgba(255,255,255,.7);
+	backdrop-filter: blur(10px);
+	padding:4em 0;
+	box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
+	li{
+		width:30%;
+		height:auto;
+		padding: 0;  /*親メニューのパディングを解除*/
+		margin:1.5%;
+		*margin-top:-8px;
+		display:block;
+		line-height:1.5em;
+		margin-bottom:1em;
+		a{
+			@include s.fontType03(Medium);
+			font-size:1em;
+			border-top: none;  /*ボーダートップは重なって太くなるので解除。一番上は ul 要素に指定*/
+			padding: 0.6em 1em;
+			text-decoration:none;
+			color: #000;
+			text-align:center;
+			display:block;
+			text-align:left;
+			position:relative;
+			&:hover{ 
+				color:#000;
+				&::after {
+					width:0;
+		                }
+			}
+			&::before {
+	                    	content: "\f105";
+	                    	font-family: 'icomoon';
+	                    	position:absolute;
+				top:50%;
+				right:1em;
+				margin-top:-0.5em;
+	                }
+			&::after {
+	                    	content: " ";
+				background:s.$colorType02;
+				width:100%;
+				height:1px;
+				display:block;
+	                    	position:absolute;
+				bottom:0;
+				right:0;
+				-webkit-transition: all .4s ease;
+				transition: all .4s ease;
+	                }
+		}
+	}
+	>.inBase{
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		position:relative;
+	}
+	p{
+		@include s.fontType04(Medium);
+		color:#000;
+		font-size:1em;
+		text-align:left;
+		margin-bottom:0.7em;
+	}
+	ul{
+		width:100%;
+		display:flex;
+		//justify-content:space-between;
+		flex-wrap:wrap;
+		li{
+			&.--type01{
+				width:100%;
+				text-align:left;
+				margin-bottom:0;
+				color:s.$colorType02;
+				a{
+					color:s.$colorType02;
+					display:inline-block;
+					&::before {
+			                    	content: none;
+			                }
+					&::after {
+			                    	content: none;
+			                }
+					&:hover{
+						color:#FFF;
+					}
+				}
+			}
+		}
+		+ul{
+			margin-top:2.5em;
+		}
+	}
+	&__list{
+		display:block;
+		width:100%;
+	}
+}
+
+#wrapper .globalNavi ul li:hover .globalNavi__menu__sub {
+	width:100vw;
+	top: 3.64em;
+	left: 50%;
+	margin-left:-50vw;
+	visibility:visible;
+	opacity: 1;
+	display: block;    /*マウスオーバー時にサブメニューを表示する*/
+	.inBase{
+		display:flex;
+		justify-content:center;
+		aligin-items:center;
+	}
+}
+
+#wrapper .globalNavi.globalNaviAccordion .globalNavi__menu__sub li{
+  	padding:0;
+}
+
+/* When Active Page */
+/*body#■■ .globalNavi ul.globalNavi__menu__main li:nth-child(■) ul.globalNavi__menu__sub li:nth-child(■) a { color:#000; background-color: #DDD; pointer-events: none; }*/
+
+
+
+

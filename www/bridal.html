@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="●サイトの検索キーワード●" />
+<meta name="description" content="●サイトの検索説明●" />
+<title>●サイトのタイトル●</title>
+<meta property="og:url" content="●ページの URL●" />
+<meta property="og:type" content="●ページの種類●website article" />
+<meta property="og:title" content="●ページの タイトル●" />
+<meta property="og:description" content="●ページの説明文●" />
+<meta property="og:site_name" content="●サイト名●" />
+<meta property="og:image" content="●サムネイル画像のURL●" />
+<meta name="apple-mobile-web-app-title" content="●iOS表示名●" />
+<meta name="author" content="●作者名●" />
+<link rel="apple-touch-icon" href="iphone.png">
+<link rel="stylesheet" href="css/import.css" media="all" />
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+JP:wght@200..900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-template-page-bridal">
+
+<div id="wrapper">
+	<header id="header" class="clearfix">
+		<div class="header__headBox">
+			
+		<div id="pageTopFix">
+		<div class="header__pageTop">
+			<dl class="header__siteTitle">
+				<dt><h1><a href="<?php echo home_url(); ?>"><img src="img/common/siteTitle.png" alt="大阪 東心斎橋 ヘア＆メイクアップ シャワー shower hair/make" /></a></h1></dt>
+				<dd>B<span>R</span>IDAL</dd>
+				<dd>トータルビューティーサロン</dd>
+			</dl>
+			<nav class="globalNavi">
+				<ul class="globalNavi__menu__main">
+					<li><span>Bridal Menu</span>
+						<div class="globalNavi__menu__sub">
+                            				<div class="inBase clearfix">
+								<div class="globalNavi__menu__sub__list">
+									<p>Bridal Menu</p>
+									<ul>
+										<li><a href="<?php echo home_url(); ?>/bridal-esthe">ブライダルエステ</a></li>
+										<li><a href="<?php echo home_url(); ?>/bridal-nail">ブライダルネイル</a></li>
+										<li><a href="<?php echo home_url(); ?>/groom-bridal-plan">新郎プラン</a></li>
+										<li><a href="<?php echo home_url(); ?>/hair">ヘアーメイク</a></li>
+										<li><a href="<?php echo home_url(); ?>/traveling-bridal-plan">出張ブライダルプラン</a></li>
+									</ul>
+								<!-- /.globalNavi__menu__subList --></div>
+							<!-- /.inBase --></div>
+						<!-- /.globalNavi__menu__sub --></div> 
+		            		</li>
+					<li><span>Gallery</span>
+						<div class="globalNavi__menu__sub">
+                            				<div class="inBase clearfix">
+								<div class="globalNavi__menu__sub__list">
+									<p>Gallery</p>
+									<ul>
+										<li><a href="<?php echo home_url(); ?>/gallery-dress">洋装</a></li>
+										<li><a href="<?php echo home_url(); ?>/gallery-kimono">和装</a></li>
+										<li><a href="<?php echo home_url(); ?>/gallery-mens-bridal">新郎</a></li>
+			
+									</ul>
+								<!-- /.globalNavi__menu__subList --></div>
+							<!-- /.inBase --></div>
+						<!-- /.globalNavi__menu__sub --></div>
+		           		</li>
+					<li><a href="<?php echo home_url(); ?>/staff-bridal">Staff</a></li>
+					<li><a href="<?php echo home_url(); ?>/blog-salon?type=bridal">Blog</a></li>
+					<li><a href="<?php echo home_url(); ?>/information-salon?type=bridal">Salon Information</a></li>
+					<li><a href="<?php echo home_url(); ?>">Salon</a></li>
+					<li><a href="#" target="_blank">online shop</a></li>
+
+				</ul>
+			<!-- /.globalNavi --></nav>
+
+		<!-- /.header__pageTop --></div>
+		<!-- /#pageTopFix --></div>
+		
+			<nav class="globalNaviSmall">
+				<div id="globalNaviSmallIcon" class="globalNaviSmall__icon globalNaviSmall__icon--type01">
+					<div class="globalNaviSmall__iconButton">
+						<div class="globalNaviSmall__title"><img src="img/common/imgMenu.svg" alt="menu" /></div>
+						<span class="iconButton--top"></span>
+						<span class="iconButton--middle"></span>
+						<span class="iconButton--bottom"></span>
+					</div>
+				</div>
+
+				<div class="modal micromodal-slide" id="modal-globalNaviSmall" aria-hidden="true">
+					<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+				    		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-globalNaviSmall-labelledby">
+
+							<div class="globalNaviSmall__menu" id="modal-globalNaviSmall-labelledby">
+								<div class="globalNaviSmall__menu__inner">
+									<div class="globalNaviSmall__siteTitle"><img src="img/common/siteTitle.png" alt="大阪 東心斎橋 ヘア＆メイクアップ シャワー shower hair/make" /></div>
+									<ul class="globalNaviSmall__menu__main">
+										<li><a href="<?php echo home_url(); ?>">Home</a></li>
+										<li><span>Bridal Menu</span>
+								            		<ul class="globalNaviSmall__menu__sub">
+												<li><a href="<?php echo home_url(); ?>/bridal-esthe">ブライダルエステ</a></li>
+												<li><a href="<?php echo home_url(); ?>/bridal-nail">ブライダルネイル</a></li>
+												<li><a href="<?php echo home_url(); ?>/groom-bridal-plan">新郎プラン</a></li>
+												<li><a href="<?php echo home_url(); ?>/hair">ヘアーメイク</a></li>
+												<li><a href="<?php echo home_url(); ?>/traveling-bridal-plan">出張ブライダルプラン</a></li>
+											</ul> 
+							            		</li>
+										<li><span>Gallery</span>
+								            		<ul class="globalNaviSmall__menu__sub">
+												<li><a href="<?php echo home_url(); ?>/gallery-bridal">Bridal</a>
+								            				<ul class="globalNaviSmall__menu__sub">
+														<li><a href="<?php echo home_url(); ?>/gallery-bridal/bridal-dress">洋装</a></li>
+														<li><a href="<?php echo home_url(); ?>/gallery-bridal/bridal-kimono">和装</a></li>
+														<li><a href="<?php echo home_url(); ?>/gallery-bridal/bridal-mens-bridal">新郎</a></li>
+													</ul>
+												</li>
+											</ul> 
+							            		</li>
+										<li><a href="<?php echo home_url(); ?>/staff-bridal">Staff</a></li>
+										<li><a href="<?php echo home_url(); ?>/blog-bridal">Blog</a></li>
+										<li><a href="<?php echo home_url(); ?>/news?type=bridal">Salon Information</a></li>
+										<li><a href="<?php echo home_url(); ?>">Salon</a></li>
+										<li><a href="#" target="_blank">online shop</a></li>
+									</ul>
+								<!-- /.globalNaviSmall__menu__inner --></div>
+							<!-- /.globalNaviSmall__menu --></div>
+
+				    		<!-- /.modal__container --></div>
+					<!-- /.modal__overlay --></div>
+				<!-- /#modal-globalNaviSmall --></div>
+
+
+		    <!-- /.globalNaviSmall --></nav>
+        <!-- /.header__headBox --></div>
+	<!-- /#header --></header>
+    
+    	<section class="mainVisual">
+		<div class="inBase">
+			<div class="mainVisual__image">
+				<img src="img/bridal/mainVisual.jpg" alt="ヘア＆メイクアップ シャワー メイン　動画" />
+			<!-- /.mainVisual__image --></div>
+			<div class="mainVisual__informationBox">
+				<div class="mainVisual__headBanner"><a href="<?php echo home_url(); ?>/bridal">
+					<p>Total beauty salon WEBSITE</p>
+					<!--<figure><img src="img/bridal/bannerHead.jpg" alt="ヘア＆メイクアップ シャワー トータルビューティサロン" /></figure>-->
+				</a><!-- /.mainVisual__headBanner --></div>
+				<p>TEL 06-6241-5435<br>UNAGIDANI-BLOCK 4F&5F, 1-19-15, <br>Higashishinsaibashi</p>
+				<ul>
+					<li><span>平日</span><span>11:00-19:00</span></li>
+					<li><span>土日祝</span><span>10：00-18：00</span></li>
+					<li><span>定休日</span><span>月・火</span></li>
+				</ul>
+				<p>TEL 06-6241-5435<br>UNAGIDANI-BLOCK 4F&5F, 1-19-15, Higashishinsaibashi</p>
+				<figure class="mainVisual__placeImage"><img src="img/salon/imgMainPlace.jpg" alt="ヘア＆メイクアップ シャワー" /></figure>
+			<!-- /.mainVisual__informationBox --></div>
+		<!-- /.inBase --></div>
+    	<!-- /.mainVisual --></section>
+	
+	<div id="contents" class="clearfix">
+		<div class="inBase"><div class="inBase__inner clearfix">
+			<div class="salonNewsBox">
+				<h2 class="salonNewsBox__title">新着情報</h2>
+				<ul class="salonNewsBox__list">
+					<li><a href="<?php echo home_url(); ?>/#"><span>2024.4.1</span><span>ブライダルエステ受付に関するお知らせ</span></a></li>
+				</ul>
+				<div class="salonNewsBox__button"><a href="<?php echo home_url(); ?>/information-salon">一覧</a></div>
+			<!-- /.salonNewsBox --></div>
+        	<!-- /.inBase__inner --></div><!-- /.inBase --></div>
+
+
+		<div class="inBase"><div class="inBase__inner clearfix">
+			<div class="salonConceptBox">
+				<div class="salonConceptBox__imageBox">
+					<p>T<span>O</span>TAL<br>BEAUTY</p>
+					<ul>
+						<li><figure><a href="<?php echo home_url(); ?>/traveling-bridal-plan"><img src="img/bridal/imgConcept01.png" alt="Hair Makeup" /></a></figure></li>
+						<li><figure><a href="<?php echo home_url(); ?>/groom-bridal-plan"><img src="img/bridal/imgConcept02.png" alt="Mens Beauty" /></a></figure></li>
+						<li><figure><a href="<?php echo home_url(); ?>/bridal-esthe"><img src="img/bridal/imgConcept03.png" alt="Esthetic treatments" /></a></figure></li>
+						<li><figure><a href="<?php echo home_url(); ?>/bridal-nail"><img src="img/bridal/imgConcept04.png" alt="Bridal Nail" /></a></figure></li>
+					</ul>
+				<!-- /.salonConceptBox__imageBox --></div>
+				<div class="salonConceptBox__contentBox">
+					<h2 class="salonConceptBox__title">BRIDAL C<span>O</span>NCEPT</h2>
+					<p>美のアーティスト集団Showerが提供するブライダルメニュー。<br>
+						ファッションショーや雑誌・CM撮影で活躍する山田磨由美 率いるプロフェッショナルチームがあなたにとって特別な一日を”最高に美しく輝かせる”ために、技術と経験でフルサポートします。<br>
+						新婦様のヘア、メイクアップ、ネイル、着付け、エステはもちろん、新郎様のコーディネートもお任せいただけます。<br>
+						専任プロフェッショナルが集結するshowerで忘れられない一日のためのトータルコーディネートを創りましょう。</p>
+				<!-- /.salonConceptBox__contentBox --></div>
+			<!-- /.salonConceptBox --></div>
+
+			<div class="salonMenuBox">
+				<h2 class="sectionTitle"><span>Bridal Menu</span><span>ブライダルメニュー</span></h2>
+				<div class="salonMenuBox__inner">
+					<div class="salonMenuBox__button"><a href="<?php echo home_url(); ?>/bridal-esthe">
+						<span>Aesthetic<br>treatments</span>
+						<span>ブライダルエステ</span>
+					</a><!-- /.salonMenuBox__button --></div>
+					<div class="salonMenuBox__button"><a href="<?php echo home_url(); ?>/bridal-nail">
+						<span>Bridal Nail</span>
+						<span>ブライダルネイル</span>
+					</a><!-- /.salonMenuBox__button --></div>
+					<div class="salonMenuBox__button"><a href="<?php echo home_url(); ?>/hair">
+						<span>Hair Makeup</span>
+						<span>ヘアメイク</span>
+					</a><!-- /.salonMenuBox__button --></div>
+					<div class="salonMenuBox__button"><a href="<?php echo home_url(); ?>/traveling-bridal-plan">
+						<span>Traveling<br>Bridal Plan</span>
+						<span>出張ブライダルプラン</span>
+					</a><!-- /.salonMenuBox__button --></div>
+					<div class="salonMenuBox__button"><a href="<?php echo home_url(); ?>/groom-bridal-plan">
+						<span>Groom Plan</span>
+						<span>新郎プラン</span>
+					</a><!-- /.salonMenuBox__button --></div>
+				<!-- /.salonMenuBox__inner --></div>
+			<!-- /.salonMenuBox --></div>
+
+			<div class="bridalButtonBox">
+				<div class="bridalButtonBox__inner">
+					<a href="#">
+						<figure><img src="img/bridal/imgFlower02.png" alt="" /></figure>
+						<figure><img src="img/bridal/imgFlower03.png" alt="" /></figure>
+						<p><span>当日までの流れ</span></p>
+					</a>
+				<!-- /.bridalButtonBox__inner --></div>
+				<div class="bridalButtonBox__inner">
+					<a href="#">
+						<figure><img src="img/bridal/imgFlower03.png" alt="" /></figure>
+						<figure><img src="img/bridal/imgFlower02.png" alt="" /></figure>
+						<p><span>お客様アンケート</span></p>
+					</a>
+				<!-- /.bridalButtonBox__inner --></div>
+			<!-- /.bridalButtonBox --></div>
+
+			<div class="salonInformationBox">
+				<h2 class="sectionTitle"><span>Media Information</span><span>メディア情報</span></h2>
+
+				<div class="salonInformationBox__mergeBox">
+					<h3 class="salonInformationBox__title">講習・雑誌・テレビ</h3>
+					<div class="salonInformationBox__content">
+						<div class="salonInformationBox__inner">
+							<div class="salonInformationBox__buttonBox">
+								<a href="#">
+									<div class="salonInformationBox__image">
+										<img src="img/bridal/imgMedia01.jpg" alt="" />
+									<!-- /.salonInformationBox__image --></div>
+									<p>掲載情報のタイトルが入ります掲載情報のタイトルが入ります掲載情報のタイトルが入ります。</p>
+									<div class="detail__link"><span>詳しく見る</span></div>
+								</a>
+								<a href="#">
+									<div class="salonInformationBox__image">
+										<img src="img/bridal/imgMedia02.jpg" alt="" />
+									<!-- /.salonInformationBox__image --></div>
+									<p>掲載情報のタイトルが入ります掲載情報のタイトル</p>
+									<div class="detail__link"><span>詳しく見る</span></div>
+								</a>
+							<!-- /.salonInformationBox__buttonBox --></div>
+						<!-- /.salonInformationBox__inner --></div>
+
+						<div class="salonInformationBox__inner">
+							<div class="salonInformationBox__buttonBox">
+								<a href="#">
+									<div class="salonInformationBox__image">
+										<!-- 縦横比率調整表示ここから -->
+										<div class="adjustBox">
+										    <div class="adjustBox__inner">
+										        <img src="img/bridal/imgSeminar01.jpg" alt="" class="wide" />
+										    <!-- /.adjustBox__inner --></div>
+										<!-- /.adjustBox --></div>
+										<!-- 縦横比率調整表示ここまで -->
+									<!-- /.salonInformationBox__image --></div>
+									<p>掲載情報のタイトルが入ります掲載情報のタイトルが入ります掲載情報のタイトルが入ります。</p>
+									<div class="detail__link"><span>詳しく見る</span></div>
+								</a>
+								<a href="#">
+									<div class="salonInformationBox__image">
+										<!-- 縦横比率調整表示ここから -->
+										<div class="adjustBox">
+										    <div class="adjustBox__inner">
+										        <img src="img/bridal/imgSeminar02.jpg" alt="" class="wide" />
+										    <!-- /.adjustBox__inner --></div>
+										<!-- /.adjustBox --></div>
+										<!-- 縦横比率調整表示ここまで -->
+									<!-- /.salonInformationBox__image --></div>
+									<p>掲載情報のタイトルが入ります掲載情報のタイトル</p>
+									<div class="detail__link"><span>詳しく見る</span></div>
+								</a>
+							<!-- /.salonInformationBox__buttonBox --></div>
+						<!-- /.salonInformationBox__inner --></div>
+					<!-- /.salonInformationBox__content --></div>
+					<div class="button--type01 tC"><a href="<?php echo home_url(); ?>/media">View More</a><!-- /.button--type01 --></div>
+				<!-- /.salonInformationBox__mergeBox --></div>
+			<!-- /.salonMenuBox --></div>
+
+			<div class="salonGalleryBox">
+				<h2 class="sectionTitle"><span>Gallery</span><span>ギャラリー</span></h2>
+
+				<div class="salonGalleryBox__content">
+					<div class="salonGalleryBox__inner">
+
+					<!-- スライダーここから -->
+					<div class="sliderBox--typeChangeSlide">
+					<!-- Slider全体のコンテナ -->
+					<div class="swiper">
+					    <!-- Sliderの内包コンテナ -->
+					    <div class="swiper-wrapper">
+					        <!-- Slideさせたいコンテンツ -->
+						<a href="#" class="swiper-slide">
+							<figure><img src="img/bridal/imgGallery01.jpg" alt="" /></figure>
+						<!-- /.swiper-slide --></a>
+						<a href="#" class="swiper-slide">
+							<figure><img src="img/bridal/imgGallery02.jpg" alt="" /></figure>
+						<!-- /.swiper-slide --></a>
+						<a href="#" class="swiper-slide">
+							<figure><img src="img/bridal/imgGallery03.jpg" alt="" /></figure>
+						<!-- /.swiper-slide --></a>
+						<a href="#" class="swiper-slide">
+							<figure><img src="img/bridal/imgGallery04.jpg" alt="" /></figure>
+						<!-- /.swiper-slide --></a>
+						<a href="#" class="swiper-slide">
+							<figure><img src="img/bridal/imgGallery05.jpg" alt="" /></figure>
+						<!-- /.swiper-slide --></a>
+						<a href="#" class="swiper-slide">
+							<figure><img src="img/bridal/imgGallery06.jpg" alt="" /></figure>
+						<!-- /.swiper-slide --></a>
+						<a href="#" class="swiper-slide">
+							<figure><img src="img/bridal/imgGallery07.jpg" alt="" /></figure>
+						<!-- /.swiper-slide --></a>
+						<a href="#" class="swiper-slide">
+							<figure><img src="img/bridal/imgGallery08.jpg" alt="" /></figure>
+						<!-- /.swiper-slide --></a>
+						<a href="#" class="swiper-slide">
+							<figure><img src="img/bridal/imgGallery09.jpg" alt="" /></figure>
+						<!-- /.swiper-slide --></a>
+						<a href="#" class="swiper-slide">
+							<figure><img src="img/bridal/imgGallery10.jpg" alt="" /></figure>
+						<!-- /.swiper-slide --></a>
+					    <!-- /.swiper-wrapper --></div>
+
+					<!-- /.swiper --></div>
+					<!-- Sliderここまで -->
+					<!-- /.sliderBox--typeChangeSlide --></div>
+					<!-- スライダーここまで -->
+
+					<!-- /.salonGalleryBox__inner --></div>
+				<!-- /.salonGalleryBox__content --></div>
+				<div class="button--type01 tC"><a href="<?php echo home_url(); ?>/gallery">View More</a><!-- /.button--type01 --></div>
+			<!-- /.salonGalleryBox --></div>
+
+
+			<div class="salonStaffBox">
+				<h2 class="sectionTitle"><span>Staff</span><span>スタッフ</span></h2>
+
+				<div class="salonStaffBox__content">
+					<div class="salonStaffBox__inner"><a href="#">
+						<figure class="salonStaffBox__bg"><img src="img/bridal/imgStaffBg01.jpg" alt="" /></figure>
+						<figure class="salonStaffBox__person"><img src="img/bridal/imgStaffPerson01.png" alt="" /></figure>
+						<figure class="salonStaffBox__image"><img src="img/bridal/imgStaffImage01.jpg" alt="" /></figure>
+						<div class="salonStaffBox__sentence">
+							<p class="salonStaffBox__copy">一生に一度の日を彩る。</p>
+							<div class="salonStaffBox__name"><p><span>Bridal Chief<br>Hair&Makeup / Nailist</span><span>井上 紗耶加</span></p></div>
+							<div class="salonStaffBox__link"><div class="detail__link"><span>View More</span></div></div>
+						<!-- /.salonStaffBox__sentence --></div>
+					</a><!-- /.salonStaffBox__inner --></div>
+				<!-- /.salonGalleryBox__content --></div>
+			<!-- /.salonStaffBox --></div>
+
+			<div class="salonBlogBox">
+				<h2 class="sectionTitle"><span>Column</span><span>コラム</span></h2>
+
+				<div class="salonBlogBox__content">
+					
+				<!-- スライダーここから -->
+				<div class="sliderBox--typeChangeSlide--typeBlog">
+				<!-- Slider全体のコンテナ -->
+				<div class="swiper">
+				    <!-- Sliderの内包コンテナ -->
+				    <div class="swiper-wrapper">
+				        <!-- Slideさせたいコンテンツ -->
+					<div class="swiper-slide">
+						<a href="#">
+							<figure><img src="img/bridal/imgBlog01.jpg" alt="" /></figure>
+							<div class="salonBlogBox__blogContent">
+								<span class="salonBlogBox__date">2024.04.01</span>
+								<p class="salonBlogBox__title">掲載情報のタイトルが入ります掲載情報のタイトルが入ります掲載情報のタイトルが入ります。</p>
+								<p class="salonBlogBox__name">TOSHI</p>
+								<div class="detail__link"><span>詳しく見る</span></div>
+							<!-- /.salonBlogBox__blogContent --></div>
+						</a>
+					<!-- /.swiper-slide --></div>
+					<div class="swiper-slide">
+						<a href="#">
+							<figure><img src="img/bridal/imgBlog02.jpg" alt="" /></figure>
+							<div class="salonBlogBox__blogContent">
+								<span class="salonBlogBox__date">2024.04.01</span>
+								<p class="salonBlogBox__title">掲載情報のタイトルが入ります掲載情報のタイトルが入ります掲載情報のタイトルが入ります。</p>
+								<p class="salonBlogBox__name">TOSHI</p>
+								<div class="detail__link"><span>詳しく見る</span></div>
+							<!-- /.salonBlogBox__blogContent --></div>
+						</a>
+					<!-- /.swiper-slide --></div>
+					<div class="swiper-slide">
+						<a href="#">
+							<figure><img src="img/bridal/imgBlog03.jpg" alt="" /></figure>
+							<div class="salonBlogBox__blogContent">
+								<span class="salonBlogBox__date">2024.04.01</span>
+								<p class="salonBlogBox__title">掲載情報のタイトルが入ります掲載情報のタイトルが入ります掲載情報のタイトルが入ります。</p>
+								<p class="salonBlogBox__name">TOSHI</p>
+								<div class="detail__link"><span>詳しく見る</span></div>
+							<!-- /.salonBlogBox__blogContent --></div>
+						</a>
+					<!-- /.swiper-slide --></div>
+					<div class="swiper-slide">
+						<a href="#">
+							<figure><img src="img/bridal/imgBlog04.jpg" alt="" /></figure>
+							<div class="salonBlogBox__blogContent">
+								<span class="salonBlogBox__date">2024.04.01</span>
+								<p class="salonBlogBox__title">掲載情報のタイトルが入ります掲載情報のタイトルが入ります掲載情報のタイトルが入ります。</p>
+								<p class="salonBlogBox__name">TOSHI</p>
+								<div class="detail__link"><span>詳しく見る</span></div>
+							<!-- /.salonBlogBox__blogContent --></div>
+						</a>
+					<!-- /.swiper-slide --></div>
+				    <!-- /.swiper-wrapper --></div>
+				    <!-- ナビゲーションボタン（※省略可） -->
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div>
+
+				<!-- /.swiper --></div>
+				<!-- Sliderここまで -->
+				<!-- /.sliderBox--typeChangeSlide --></div>
+				<!-- スライダーここまで -->
+
+
+				<!-- /.salonBlogBox__content --></div>
+			<!-- /.salonBlogBox --></div>
+        	<!-- /.inBase__inner --></div><!-- /.inBase --></div>
+
+
+
+	<!-- /#contents --></div>
+
+	
+	<footer id="footer">
+		<div class="inBase"><div class="inBase__inner clearfix">
+			<div class="footer__inner">
+				<div class="footer__siteTitle"><img src="img/common/siteTitle.png" alt="大阪 東心斎橋 ヘア＆メイクアップ シャワー shower hair/make" /><!-- /.footer__siteTitle --></div>
+				<p class="footer__address">大阪市中央区東心斎橋1-19-15 UNAGIDANI-BLOCK 4F＆5F</p>
+				<p class="footer__tel"><span>TEL  06-6241-5435</span><small>ご予約は電話のみで受け付けております。</small></p>
+				<p class="footer__hour">
+					平　日　11:00 - 19:00 （全メニュー19:00迄）<br>
+					土日祝　10:00 - 18:00 （全ての受付18:00迄）<br>
+					定休日　毎週月曜日・火曜日
+				</p>
+				<p class="copyright">&copy;2024 Hair Make Shower All Rights Reserved.</p>
+			<!-- /.footer__inner --></div>
+			<div class="footer__mapBox">
+				<div class="googleMapBox">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6562.418734733761!2d135.50248!3d34.674665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e7173ed54dcd%3A0xd9661888fd884208!2z44OY44Ki44O844Oh44Kk44Kv44K344Oj44Ov44O8!5e0!3m2!1sja!2sjp!4v1728450882868!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<!-- /.googleMapBox --></div>
+			<!-- /.footer__mapBox --></div>
+        	<!-- /.inBase__inner --></div><!-- /.inBase --></div>
+	<!-- /#footer --></footer>
+
+        
+	<p id="btnRise"><a href="#wrapper"><i class="icon-angle-up"></i></a></p>
+	  
+	<div id="btnTelEmpty"></div>
+    
+    <div id="btnPageBottom">
+        <div class="btnPageBottom--btn">
+            <a class="clearfix is-notMovePage" href="tel:0662415435">
+                <span>電話する</span>
+            </a>
+            <a class="clearfix is-notMovePage" href="<?php echo home_url(); ?>/">
+                <span>サロン案内</span>
+            </a>
+        <!-- /.btnPageBottom--btn --></div>
+    <!-- /#btnPageBottom --></div>
+<!-- /#wrapper --></div>
+
+</body>
+</html>
+
+<script data-main="js/main" src="js/require.js"></script>                                                                                                                                                                                                                                                                                                                                                                                             <!-- /#btnPageBottom --></div>
+<!-- /#wrapper --></div>
+
+</body>
+</html>
+
+<script data-main="js/main" src="js/require.js"></

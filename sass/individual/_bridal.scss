@@ -1,0 +1,318 @@
+@use "../_setting" as s;
+
+.page-template-page-bridal {
+	#wrapper {
+		.mainVisual__informationBox{
+			&::after{
+				content:"";
+				display:block;
+				width:15em;
+				height:10em;
+				background: url(../img/bridal/imgMainVisualImage.png) no-repeat center top;
+				background-size:100% auto;
+				position:absolute;
+				bottom:-5em;
+				right:-5em;
+				z-index:1;
+				@include s.media(m){
+					content:"";
+					display:block;
+					width:35em;
+					height:18.4em;
+					background: url(../img/bridal/imgMainVisualImage.png) no-repeat center top;
+					background-size:100% auto;
+					position:absolute;
+					bottom:-3.8em;
+					right:-28.5em;
+				}
+				@include s.media(xl){
+					width:32.9em;
+					position:absolute;
+					bottom:-5.5em;
+					right:-27em;
+				}
+			}
+		}
+		.mainVisual__headBanner p{
+			background:s.$colorType03;
+		}
+		.salonNewsBox{
+			background:s.$colorType06;
+			margin-top: 0;
+			@include s.media(m){
+				width:100%;
+				margin-bottom:6em;
+				margin-top:3em;
+			}
+		}
+		.salonConceptBox{
+			&::before{
+				background: rgb(255,255,255);
+				background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(241,235,225,.5) 100%);
+			}
+		}
+		.salonConceptBox__imageBox{
+			padding-top:85%;
+			margin-left:5%;
+			margin-bottom:6em;
+			@include s.media(m){
+				padding-top:50%;
+				margin-left:-8%;
+				margin-bottom:0;
+			}
+			&::before{
+				content:none;
+			}
+			p{
+				top:42%;
+				left:30%;
+				@include s.media(m){
+					top:42%;
+					left:37%;
+				}
+				@include s.media(xl){
+					left:35%;
+				}
+			}
+			figure{
+				&::before{
+					height:130%;
+					@include s.media(m){
+						width:95%;
+					}
+				}
+			}
+			ul li{
+				figcaption{
+					line-height:1.1em;
+				}
+				&:nth-child(1){
+					top:0;
+					left:0;
+					@include s.media(m){
+						top:0;
+						left:5%;
+					}
+				}
+				&:nth-child(2){
+					top:0;
+					left:40%;
+					margin-left:0;
+					@include s.media(m){
+						left:47%;
+					}
+				}
+				&:nth-child(3){
+					bottom:0;
+					left:0;
+					@include s.media(m){
+						bottom:0;
+						left:5%;
+					}
+					figure{
+						&::before{
+							height:120%;
+						}
+					}
+				}
+				&:nth-child(4){
+					top:unset;
+					bottom:0;
+					left:40%;
+					@include s.media(m){
+						bottom:0;
+						left:47%;
+					}
+				}
+			}
+		}
+		.salonConceptBox__title{
+			position:relative;
+			color:#a5956a;
+			@include s.media(m){
+				padding-left:2em;
+			}
+			span{
+				color:s.$colorType02;
+			}
+			&::after{
+				content:"";
+				display:block;
+				width:6em;
+				height:6.5em;
+				background: url(../img/bridal/imgFlower01.png) no-repeat center top;
+				background-size:100% auto;
+				position:absolute;
+				top:-3em;
+				left:0;
+				@include s.media(m){
+					content:"";
+					display:block;
+					width:5em;
+					height:5.5em;
+					background: url(../img/bridal/imgFlower01.png) no-repeat center top;
+					background-size:100% auto;
+					position:absolute;
+					top:-3em;
+					left:-3em;
+				}
+			}
+		}
+		.salonConceptBox__contentBox::before{
+			background: rgb(255,255,255);
+			background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(241,235,225,.5) 100%);
+		}
+		.salonConceptBox__contentBox::after{
+			background: rgba(241,235,225,.5);
+		}
+		.salonMenuBox__button a{
+			background:rgba(s.$colorType06,.6);
+			&:hover{
+				background:rgba(s.$colorType06,.9);
+			}
+		}
+		.salonInformationBox::before{
+			background: url(../img/bridal/imgBg01.jpg) repeat-x center top;
+			background-size:100% auto;
+			@include s.media(m){
+				background: url(../img/bridal/imgBg01.jpg) repeat-x center top;
+				background-size:auto auto;
+				top:-10em;
+			}
+		}
+		.salonStaffBox__content{
+			&::before{
+				background:s.$colorType04;
+			}
+			&::after{
+				background:s.$colorType04;
+			}
+		}
+		.salonStaffBox__inner a{
+			background:#a5956a;
+			&:hover{
+				background:#000;
+			}
+		}
+		.salonMenuBox__button{
+			&:nth-child(1) a{
+				@include s.media(m){
+					padding:0.6em 2em;
+				}
+			}
+			&:nth-child(2) a{
+				padding: 1.5em 2em;
+				@include s.media(m){
+				}
+			}
+			&:nth-child(3) a{
+				@include s.media(m){
+					padding:0.6em 2em;
+				}
+			}
+			&:nth-child(4) a{
+				padding: 1.5em 2em;
+				@include s.media(m){
+					//padding:0.6em 2em;
+				}
+			}
+			a span:nth-child(1){
+				color:#A5956A;
+			}
+		}
+		.bridalButtonBox{
+			width:block;
+			margin-bottom:4em;
+			@include s.media(m){
+				width:100%;
+				display:flex;
+				justify-content:space-between;
+			}
+			&__inner{
+				width:100%;
+				margin-bottom:1em;
+				background:#D5D0BC;
+				padding:0.5em;
+				img{
+					width:100%;
+				}
+				@include s.media(m){
+					width:49%;
+				}
+				a{
+					border:s.$colorType02 solid 1px;
+					background:#FFF;
+					display:block;
+					text-align:center;
+					position:relative;
+					&:hover{
+						color:#000;
+						background:s.$colorType05;
+					}
+				}
+				p{
+					font-size:1.4em;
+					@include s.fontType02(Bold);
+					color:s.$colorType02;
+					letter-spacing:0.1em;
+					padding:1.3em 0;
+					@include s.media(m){
+						font-size:2.125em;
+					}
+				}
+				figure{
+					&:nth-child(1){
+						width:7em;
+						position:absolute;
+						bottom:-1.6em;
+						left:-1.4em;
+						@include s.media(m){
+							width:9.75em;
+							bottom:-1.7em;
+							left:-1.6em;
+						}
+					}
+					&:nth-child(2){
+						width:6em;
+						position:absolute;
+						top:-0.5em;
+						right:-0.5em;
+						@include s.media(m){
+							width:7.81em;
+						}
+					}
+				}
+				&:nth-child(2){
+					figure{
+						transform: scale(-1, -1);
+						&:nth-child(1){
+							width:6em;
+							bottom:-0.5em;
+							left:-0.5em;
+							@include s.media(m){
+								width:7.81em;
+							}
+						}
+						&:nth-child(2){
+							width:7em;
+							top:-1.7em;
+							right:-1.3em;
+							@include s.media(m){
+								width:9.75em;
+								top:-1.7em;
+								right:-1.6em;
+							}
+						}
+					}
+				}
+			}
+		}
+		.salonStaffBox__name p span:nth-child(2){
+			margin-top:-0.2em;
+			@include s.media(m){
+				margin-top:-0.1em;
+			}
+		}
+	}
+
+}
